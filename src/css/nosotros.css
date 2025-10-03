@@ -1,4 +1,3 @@
-/* Sección About */
 .section-about {
     padding: 40px 20px;
     max-width: 1000px;
@@ -16,6 +15,7 @@
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+    margin-top: 20px;
 }
 
 #mision-vision div {
@@ -23,19 +23,40 @@
     background: #f1f8f6;
     padding: 20px;
     border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#mision-vision div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 #valores ul {
     list-style: none;
     padding: 0;
+    margin-top: 20px;
 }
 
 #valores li {
-    margin: 8px 0;
+    margin: 10px 0;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: color 0.3s, transform 0.3s;
 }
 
-/* Equipo */
+#valores li i {
+    color: #00796b;
+    font-size: 1.3rem;
+}
+
+#valores li:hover {
+    color: #004d40;
+    transform: scale(1.05);
+}
+
 .equipo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -48,7 +69,7 @@
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #ddd;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .miembro img {

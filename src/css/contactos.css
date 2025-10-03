@@ -1,5 +1,4 @@
-/* Contacto */
-.section-contacto {
+.seccion-contacto {
     padding: 40px 20px;
     max-width: 1100px;
     margin: auto;
@@ -22,6 +21,7 @@
 .formulario label {
     margin: 10px 0 5px;
     font-weight: bold;
+    color: #004d40;
 }
 
 .formulario input,
@@ -31,6 +31,14 @@
     border-radius: 6px;
     margin-bottom: 15px;
     font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border: 1px solid #00796b;
+    box-shadow: 0 0 6px rgba(0, 121, 107, 0.4);
+    outline: none;
 }
 
 .formulario button {
@@ -40,11 +48,13 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
+    font-weight: bold;
 }
 
 .formulario button:hover {
     background-color: #004d40;
+    transform: scale(1.05);
 }
 
 .info-contacto {
@@ -60,12 +70,10 @@
 }
 
 .info-contacto p {
-    margin: 8px 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .contacto-grid {
-        grid-template-columns: 1fr;
-    }
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
